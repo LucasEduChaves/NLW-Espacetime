@@ -28,10 +28,17 @@ body {
 
   font-family: var(--ff-titles);
   font-weight: 400;
+
+  display: grid;
+  grid-template-areas: "profile timeline";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
 }
 
 nav {
   padding: 6.4rem;
+
+  grid-area: timeline;
 }
 
 .container {
@@ -66,4 +73,23 @@ nav {
   font-size: var(--fz-text);
   line-height: var(--lh-text);
   color: var(--fc-text);
+}
+
+aside {
+  grid-area: profile;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+
+  border-right: 1px solid;
+  border-image: linear-gradient(#727275, #2c2c31) 1;
+
+  background-image: url("./assets/background.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
