@@ -9,11 +9,11 @@
 
   font-size: 62.5%;
 
-  --bg-back: hsl(240, 8%, 8%);
-  --fc-text: hsl(0, 0%, 92%);
-  --fc-dates: hsl(240, 1%, 75%);
+  --bg-back: hsla(240, 8%, 8%, 1);
+  --fc-title: hsla(0, 0%, 92%, 1);
+  --fc-text: hsla(240, 1%, 75%, 1);
 
-  --fz-tilte: 3.2rem;
+  --fz-title: 3.2rem;
   --fz-text: 1.8rem;
   --fz-dates: 1.2rem;
 
@@ -24,7 +24,6 @@
 
 body {
   background-color: var(--bg-back);
-  color: var(--fc-text);
 
   font-family: var(--ff-titles);
   font-weight: 400;
@@ -53,13 +52,15 @@ nav {
 .container small {
   font-size: var(--fz-dates);
   line-height: var(--lh-dates);
-  color: var(--fc-dates);
+  color: var(--fc-text);
 }
 
 .container h1 {
-  font-size: var(--fz-tilte);
+  font-size: var(--fz-title);
   line-height: var(--lh-title);
   font-weight: 700;
+
+  color: var(--fc-title);
 }
 
 .container img {
@@ -92,4 +93,28 @@ aside {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: auto 100%;
+}
+
+.capture {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    circle at center,
+    #d39e33,
+    #ed5636,
+    #633bbc);
+  background-size: 500%;
+  background-repeat: no-repeat;
+  padding: 0.4rem;
+}
+
+aside p {
+  font-size: var(--fz-title);
+  color: var(--fc-title);
+}
+
+aside span {
+  font-size: var(--fz-dates);
+  color: var(--fc-text);
 }
